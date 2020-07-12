@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Registrasi</title>
-</head>
+<title> My Guest Book</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body, html {height: 100%}
+.bgimg {
+  background-image: url('11.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
 <body>
-    <form action="proses.php" method="POST">
-        <fieldset>
-        <legend>Registrasi</legend>
-        <p>
-            <label>Nama:</label>
-            <input type="text" name="nama" placeholder="Nama lengkap..." />
-        </p>
-        <p>
-            <label>Username:</label>
-            <input type="text" name="username" placeholder="Username..." />
-        </p>
-        <p>
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="Your email..." />
-        </p>
-        <p>
-            <label>Password:</label>
-            <input type="password" name="password" placeholder="Passowrd..." />
-        </p>
-        <p>
-            <label>Jenis kelamin:</label>
-            <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
-            <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
-        </p>
-        <p>
-            <label>Agama:</label>
-            <select name="agama">
-                <option value="islam">Islam</option>
-                <option value="kristen">Kristen</option>
-                <option value="hindu">Hindu</option>
-                <option value="budha">Budha</option>
-            </select>
-        </p>
-       
-        <p>
-            <input type="submit" name="submit" value="Daftar" />
-        </p>
-        </fieldset>
-    </form>
+	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+		 <div class="w3-display-middle">
+	<div align="center"> <strong><font size="6" face="courier new, courier, mono">PENDAFTARAN ONLINE PESERTA GYM</font></strong> </div>
+
+	<h3>Identitas Calon Anggota</h3>
+<form action="proses.php" method="POST">
+<div class="content">
+    <table class="table-form" align="center" border="0" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="20%"><label for="nama">Nama Lengkap</label></td>
+            <td colspan="3"><input name="nama" id="nama" type="text" class="form"></td>
+        </tr>
+        <tr>
+            <td><label for="tempat_lahir">Tempat Lahir</label></td>
+            <td><input name="tempat_lahir" id="tempat_lahir" type="text" class="form"></td>
+            <td><label>Tanggal Lahir</label></td>
+            <td>
+                <input type="number" name="tanggal" id="tanggal" class="form">
+               
+            </td>
+        </tr>
+        <tr>
+            <td valign="top"><label for="alamat">Alamat</label></td>
+            <td valign="top" colspan="2">
+                <textarea name="alamat" id="alamat" class="form" cols="50" rows="8"></textarea>
+            </td>
+            <td valign="top">
+                <div>
+                    <label for="kota">Kota</label>
+                    <input type="text" name="kota" id="kota" class="form">
+                </div>
+                <div>
+                    <label for="negara">Negara</label>
+                    <input type="text" name="negara" id="negara" class="form">
+                </div>
+                <div>
+                    <label for="kode_pos">Kode Pos</label>
+                    <input type="number" name="kode_pos" id="kode_pos" class="form">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="hp">No. HP</label></td>
+            <td colspan="3"><input name="hp" id="hp" type="number" class="form"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td colspan="3"><input name="email" id="email" type="text" class="form"></td>
+        </tr>
+        <tr>
+            <td><label for="tinggi_badan">Tinggi Badan</label></td>
+            <td colspan="3"><input name="tinggi_badan" id="tinggi_badan" type="number" class="form"></td>
+        </tr>
+        <tr>
+            <td><label for="berat_badan">Berat Badan</label></td>
+            <td colspan="3"><input name="berat_badan" id="berat_badan" type="number" class="form"></td>
+        </tr>
+    </table>
+</div>
+<input type="submit" class="btn" value="Simpan">
+</form>
+
+	</form>
+	<div align="center"><strong><a href="tabel.php">::Lihat Anggota Terdaftar ::</strong></div>
+		 
+    
 </body>
 </html>
