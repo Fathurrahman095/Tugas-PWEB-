@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>Peserta</title>
+<style type="text/css">
+body, html {height: 100%}
+.bgimg {
+  background-image: url('98.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+		 <div class="w3-display-middle">
+		<h1 align="center">Anggota GYM </h1>
+		<table width="100%" style="border-collapse:collapse;" border="1">
+			<tr>
+				<th>Nama Lengkap</th>
+				<th>Tempat Lahir</th>
+				<th>Tanggal Lahir</th>
+				<th>Alamat</th>
+				<th>Kota</th>
+				<th>Negara</th>
+				<th>Kode Pos</th>
+				<th>No.HP</th>
+				<th>Email</th>
+				<th>Tinggi Badan</th>
+				<th>Berat Badan</th>
+				
+			</tr>
+			<?php 
+				echo "<head><title>Peserta GYM Yang Telah Terdaftar</head></title>";
+				$fp = fopen("pendaftaran.txt", "a+");
+			?>
+			<?php while ($isi = fgets($fp,200)) 
+			{
+				$pisah = explode ("|", $isi);
+				?>
+				<tr>
+					<th><?php echo"$pisah[0]"; ?></th>
+					<th><?php echo"$pisah[1]"; ?></th>
+					<th><?php echo"$pisah[2]"; ?></th>
+					<th><?php echo"$pisah[3]"; ?></th>
+					<th><?php echo"$pisah[4]"; ?></th>
+					<th><?php echo"$pisah[5]"; ?></th>
+					<th><?php echo"$pisah[6]"; ?></th>
+					<th><?php echo"$pisah[7]"; ?></th>
+					<th><?php echo"$pisah[8]"; ?></th>
+					<th><?php echo"$pisah[9]"; ?></th>
+					<th><?php echo"$pisah[10]"; ?></th>
+					
+				</tr>
+			<?php } ?>
+		</table>
+		<button class="tombol"><a align="center" href="Form.html">Kembali Ke Menu Awal</a>
+	</div>
+</body>
+</html>
